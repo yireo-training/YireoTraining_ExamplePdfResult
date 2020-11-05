@@ -61,7 +61,11 @@ class Pdf extends AbstractResult
         return $this;
     }
 
-
+    /**
+     * @param HttpResponseInterface $response
+     * @return $this|Pdf
+     * @throws FileSystemException
+     */
     protected function render(HttpResponseInterface $response)
     {
         $response->setHeader(
